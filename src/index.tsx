@@ -14,13 +14,13 @@ export const render = (req: Request, h) => {
 		const stream = new PassThrough();
 		let response: ResponseObject = h.response(stream);
 		let didError = false;
-		const page = req.path.split('/').pop();
+		// const page = req.path.split('/').pop();
 		// const clientJs = _.upperFirst(_.isEmpty(page) ? 'index' : page);
 		const { pipe, abort } = renderToPipeableStream(
 			<html>
 				<head></head>
 				<body>
-					<App assets={{ index: `/public/client.js` }}>{/* <StaticRoutes location={req.url} /> */}</App>
+					<App assets={{ index: `/public/client.js` }} />
 					<script type="module" src="/public/client.js"></script>
 				</body>
 			</html>,
@@ -38,7 +38,8 @@ export const render = (req: Request, h) => {
 				},
 				onError(error) {
 					didError = true;
-					req.logger.error(error);
+					// req.logger.error(error);
+					console.error(error);
 				},
 			}
 		);
