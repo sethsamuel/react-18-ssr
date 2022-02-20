@@ -16,7 +16,8 @@
 		"@hapi/hapi": "20.2.1",
 		"@hapi/inert": "6.0.5",
 		"react": "18.0.0-rc.0",
-		"react-dom": "18.0.0-rc.0"
+		"react-dom": "18.0.0-rc.0",
+		"react-error-boundary": "3.1.4"
 	},
 	"devDependencies": {
 		"@types/node": "17.0.18",
