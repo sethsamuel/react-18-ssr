@@ -1,0 +1,30 @@
+{
+	"name": "react-18-ssr",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"bundle": "PARCEL_WORKERS=0 parcel build src/www/client.tsx --no-optimize --dist-dir dist/src/public --public-url /public",
+		"prestart": "tsc && npm run bundle",
+		"start": "node dist/src",
+		"dev": "parcel src/www/index.html",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@hapi/hapi": "20.2.1",
+		"@hapi/inert": "6.0.5",
+		"react": "18.0.0-rc.0",
+		"react-dom": "18.0.0-rc.0"
+	},
+	"devDependencies": {
+		"@types/node": "17.0.18",
+		"parcel": "2.3.2",
+		"tsc-alias": "1.6.1",
+		"typescript": "4.5.5"
+	},
+	"browserslist": [
+		"last 3 chrome versions"
+	]
+}
