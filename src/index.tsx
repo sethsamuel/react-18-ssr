@@ -26,7 +26,7 @@ export const render = (req: Request, h) => {
 			</html>,
 
 			{
-				onCompleteShell() {
+				onShellReady() {
 					// If something errored before we started streaming, we set the error code appropriately.
 					// const statusCode = matchRoutes(pageRoutes, req.path)?.[1]?.route.path !== '*' ? 200 : 404;
 					const statusCode = 200;
